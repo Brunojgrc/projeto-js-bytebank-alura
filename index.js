@@ -1,24 +1,17 @@
 import {Cliente} from "./Cliente.js"
 import {ContaCorrente} from "./ContaCorrente.js"
 
-const cliente1 = new Cliente(); // instanciando um objeto...
-cliente1.nome = "Bruno";
-cliente1.cpf = 88822233309;
+const cliente1 = new Cliente("Bruno", 88822233309 ); // instanciando um objeto...
+const cliente2 = new Cliente("Georgea", 11122233309);
 
-const cliente2 = new Cliente();
-cliente2.nome = "Georgea";
-cliente2.cpf = 11122233309;
+const contaCorrenteB = new ContaCorrente(cliente1, 1001);
 
-
-const contaCorrenteBruno = new ContaCorrente();
-contaCorrenteB.agencia = 1001;
-contaCorrenteB.cliente = cliente1;
 contaCorrenteB.depositar(1000);
 
-const contaCorrenteG = new ContaCorrente();
-contaCorrenteG.agencia = 1002;
-contaCorrenteG.cliente = cliente2;
-contaCorrenteB.transferir(300, contaCorrenteGeorgea);
+const contaCorrenteG = new ContaCorrente(cliente2, 1002);
+
+let valor = 200;
+contaCorrenteB.transferir(valor, contaCorrenteG);
 
 //Sacar:
 //const valorSacado = contaCorrenteBruno.sacar();
@@ -26,3 +19,4 @@ contaCorrenteB.transferir(300, contaCorrenteGeorgea);
 
 console.log(contaCorrenteB);
 console.log(contaCorrenteG);
+console.log("Total de número de contas abertas: ", ContaCorrente.numeroDeContas);
