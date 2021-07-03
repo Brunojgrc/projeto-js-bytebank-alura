@@ -1,4 +1,4 @@
-export class Cliente { // class é como se fosse o molde...
+export class Cliente {
     nome;
     _cpf;
 
