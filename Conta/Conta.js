@@ -4,8 +4,8 @@ própria classe, mas ela pode ser herdada, assim como temos nossa ContaCorrente 
 export class Conta {
 
     constructor(cliente, agencia, saldoInicial) {
-        if(this.constructor == Conta){
-            throw new Erro ("Não poderá instanciar um objeto do tipo Conta, pois essa é uma Classe Abstrata!")
+        if (this.constructor == Conta) {
+            throw new Erro("Não poderá instanciar um objeto do tipo Conta, pois essa é uma Classe Abstrata!")
         }
 
         this._cliente = cliente;
@@ -36,9 +36,9 @@ export class Conta {
         return this.saldo;
     }
 
-//Método abstrato
+    //Método abstrato
     sacar(valor) {
-        throw new Erro ("Deverá ser criado o método em todo tipo de conta específica, pois o método sacar da conta é abstrato")
+        throw new Erro("Deverá ser criado o método em todo tipo de conta específica, pois o método sacar da conta é abstrato")
     }
 
     _sacar(valor, taxa) {

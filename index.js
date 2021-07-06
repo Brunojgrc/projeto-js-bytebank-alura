@@ -1,24 +1,32 @@
+//import { Gerente } from "./Funcionario/Gerente.js";
+//import { Diretor } from "./Funcionario/Diretor.js";
+import { SistemaAutenticacao } from "./SistemaAutenticacao.js";
 import { Cliente } from "./Cliente.js";
-import { ContaCorrente } from "./ContaCorrente.js";
-import { ContaPoupanca } from "./ContaPoupanca.js";
-import { ContaSalario } from "./ContaSalario.js";
 
-const cliente1 = new Cliente("Bruno", 88822233309); // instanciando um objeto...
-const cliente2 = new Cliente("Georgea", 11122233309);
+
+//const diretor = new Diretor("Bruno", 123456789800, 10000);
+//diretor.cadastrarSenha("1234");
+
+const cliente = new Cliente("Victor", 12345678901, 5000);
+cliente.cadastrarSenha("1234");
+//const estaLogado = SistemaAutenticacao.login(diretor, "1234");
+const estaLogado = SistemaAutenticacao.login(cliente, "1234");
+console.log(estaLogado);
+
+
+
+
+//onst cliente1 = new Cliente("Bruno", 88822233309); // instanciando um objeto...
+//const cliente2 = new Cliente("Georgea", 11122233309);
 
 //cliente1:
-const contaCorrenteB = new ContaCorrente(cliente1, 1001);
-contaCorrenteB.depositar(1000);
-contaCorrenteB.sacar(100);
-console.log(contaCorrenteB);
+//const contaCorrenteB = new ContaCorrente(cliente1, 1001);
+//contaCorrenteB.depositar(1000);
+//contaCorrenteB.sacar(100);
+//console.log(contaCorrenteB);
 
-const contaPoupanca = new ContaPoupanca(cliente1, 1001, 50);
-console.log(contaPoupanca);
-
-const testeSalario = new ContaSalario(cliente1, 1001);
-testeSalario.depositar(100);
-testeSalario.sacar(10);
-console.log(testeSalario);
+//const contaPoupanca = new ContaPoupanca(cliente1, 1001, 50);
+//console.log(contaPoupanca);
 
 //cliente2:
 //const contaCorrenteG = new ContaCorrente(cliente2, 1002);

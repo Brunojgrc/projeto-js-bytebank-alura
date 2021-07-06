@@ -2,13 +2,15 @@ export class Cliente {
     //nome; inicializamos as varíaveis direto no construtor.
     //_cpf;
 
-    constructor(nome, cpf) {
+    constructor(nome, cpf, senha) {
         this.nome = nome;
         this._cpf = cpf;
     }
 
-    get cpf() {
-        return this._cpf;
+    autenticar(senha) {
+        return senha == this._senha;
     }
-
+    cadastrarSenha(senha) {
+        return this._senha = senha;
+    }
 }
